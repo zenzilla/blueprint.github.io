@@ -1,0 +1,250 @@
+<html><head>
+  <script type="text/javascript">
+     function ExampleJS(){
+        alert("We received your zipcode! We will now give you your volunteering options.");
+
+     }
+  </script>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4CAF50;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:210&amp;display=swap">
+  <style>
+    body {
+    font-family: 'Oswald', calibri;
+    font-size: 15px;
+    }
+  </style>
+
+<style>
+  body{
+   background-size: cover;
+   background-repeat: no-repeat;
+   font-family: 'Oswald', calibri;   
+  }
+  a {
+   size: 75px;
+  }
+ </style> 
+
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade" style="display: none;">
+  <img src="https://cms-tc.pbskids.org/parents/articles/_shellTopicsFeature/Tips-for-Volunteering-With-Kids.jpg?mtime=20181203085840" style="width:100%">
+</div>
+
+<div class="mySlides fade" style="display: none;">
+  <img src="https://www.lgrc.us/wp-content/uploads/2014/04/family-silhouette1.png" style="width:100%">
+</div>
+
+<div class="mySlides fade" style="display: block;">
+  <img src="https://www.pets4homes.co.uk/images/articles/1896/large/why-it-is-vital-to-ensure-that-your-children-do-not-tease-your-puppy-53ce7b988d31b.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)"></a>
+<a class="next" onclick="plusSlides(1)"></a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot active" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<center><h1>Choose How to Change the World</h1></center>
+
+<center><div class="dropdown">
+  <button class="dropbtn">Volunteer Today</button>
+  <div class="dropdown-content">
+  <a href="#">Animals</a>
+  <a href="#">Hunger</a>
+  <a href="#">Climate</a>
+  <a href="#">Community</a>
+</div></div></center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<script>   
+var colors = ["white"]
+var r = Math.floor(Math.random() * colors.length)
+document.body.style["background-color"] = colors[r]
+</script> 
+
+<div class="bv-shadow-dom"><div class="bv-shadow-dom-container"></div></div></body></html>
